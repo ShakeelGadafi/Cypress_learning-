@@ -2,13 +2,33 @@ import { Loginpage } from "./loginPAge/loginpage"
 
 const loginPage = new Loginpage
 
-it('page onject model', function(){
+describe('Login page ',function(){
 
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    beforeEach(function(){
+  cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+
+    })
+
+it('demo 1', function(){
+
+  
 
     loginPage.enterUsername('Admin')
     loginPage.enterpasscode("admin123")
     loginPage.clickbtn()
 
+
+})
+
+it('demo 2', function(){
+
+
+
+    loginPage.enterUsername('Admin')
+    loginPage.enterpasscode("admin123")
+    loginPage.clickbtn()
+
+
+})
 
 })
